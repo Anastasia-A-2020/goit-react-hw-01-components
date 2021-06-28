@@ -1,4 +1,6 @@
 import s from "./Profile.module.css";
+import PropTypes from 'prop-types';
+
 export default function Profile({avatar, name, tag, location, stats}) {
     return (
         <div className={s.profile}>
@@ -33,3 +35,10 @@ export default function Profile({avatar, name, tag, location, stats}) {
     )
 }
 
+Profile.propTypes = {
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.object.isRequired
+}
