@@ -1,18 +1,45 @@
 .profile{
     width:200px;
-    padding: 5px;
     border: black solid;
 }
 
-img{
+.profile img{
     display: block;
     max-width: 100%;
     border-radius: 50%;
     background-color:lightblue;
 }
 
-.description{
+.description{    
+    padding: 5px;
+    margin: 0;
     font-size: 20px;
     font-weight: 700;
     text-align: center;
+}
+
+.stats{
+    display: flex;
+	padding: auto;
+	justify-content: space-between;  
+}
+
+.statsItem{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 17px;
+}
+
+.statsItem:nth-of-type(1){
+    background-color: pink;
+}
+
+.statsItem:nth-of-type(2){
+    background-color: lightblue;
+}
+
+.statsItem:nth-of-type(3){
+    background-color: lightyellow;
 }

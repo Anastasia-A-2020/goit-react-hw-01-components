@@ -6,14 +6,16 @@ export default function Statistics({ title, stats }) {
     const isTitle = { title };
 
     return (
-        <section className={s.statistics}>
-            <h2 className={s.title}>{isTitle && title}</h2>
-            <ul>
-            {stats.map(stat =>(<li key ={stat.id}>
-                <StaticItem label={stat.label} percentage={stat.percentage} />
-            </li>))
-            }
-        </ul>
+        <section >
+            <div className={s.statistics}>
+                <h2 className={s.title}>{isTitle && title}</h2>
+                <ul className={s.statisticsList}>
+                    {stats.map(stat => (<li className={s.statisticsItem } key ={stat.id}>
+                    <StaticItem label={stat.label} percentage={stat.percentage} />
+                    </li>))
+                    }
+                </ul>
+            </div>    
         </section>
     )
 }

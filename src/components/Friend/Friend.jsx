@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
+import s from "./Friend.module.css";
 
-export default function Friend({isOnline, name, avatar}) {
+export default function Friend({name, isOnline, avatar}) {
     return (
         <>
-            <span className="status">{isOnline}</span>
-            <img className="avatar" src={avatar} alt={name} width="48" />
-            <p className="name">{name}</p>
+            <span className={s.status} isOnline={isOnline} style={{
+                backgroundColor: isOnline? 'green' : 'red'
+            }}>{isOnline}</span>
+            <img className={s.avatar} src={avatar} alt={name} width="48" />
+            <p className={s.name}>{name}</p>
         </>
     )
 }

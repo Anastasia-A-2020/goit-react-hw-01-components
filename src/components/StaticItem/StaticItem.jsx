@@ -5,7 +5,7 @@ export default function StaticItem({ label, percentage }){
     return (
         <>
             <span className={s.label}>{label}</span>
-            <span className={s.percentage}>{percentage}</span>
+            <span className={s.percentage}>{ percentage}%</span>
         </>
     )
 }
